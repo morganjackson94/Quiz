@@ -85,10 +85,11 @@ $( document ).ready(function() {
         	$('div input:radio').remove();
         	$('div span').remove();
 	        $('div br').remove();
+	        $('.title').remove();
 	        number++;
     	    console.log(number);
     	    console.log(questions.length-1);
-        	var newQuestion = '<div class="questions"><p> ' + questions[number].questNum + '. ' + questions[number].question + '<b>(Question ' + questions[number].questNum + ' of 5)</b></p><input type = "radio" name = "0" value = "0"><span>' + questions[number].choices[0] + '</span><br><input type = "radio" name = "0" value = "1"><span>' + questions[number].choices[1] + '</span><br><input type = "radio" name = "0" value = "2"><span>' + questions[number].choices[2] + '</span><br><input type = "radio" name = "0" value = "3"><span>' + questions[number].choices[3] + '</span><br>';
+        	var newQuestion = '<header class="title"><img src="img/quizlogo.png" alt="Music History Quiz" width="200px"></header><p class="questions"> ' + questions[number].questNum + '. ' + questions[number].question + '<br><b>(Question ' + questions[number].questNum + ' of 5)</b></p><input type = "radio" name = "0" value = "0"><span>' + questions[number].choices[0] + '</span><br><br><input type = "radio" name = "0" value = "1"><span>' + questions[number].choices[1] + '</span><br><br><input type = "radio" name = "0" value = "2"><span>' + questions[number].choices[2] + '</span><br><br><input type = "radio" name = "0" value = "3"><span>' + questions[number].choices[3] + '</span><br><br><br>';
         	$('div').prepend(newQuestion);
         	
     	}	
@@ -99,7 +100,7 @@ $( document ).ready(function() {
     function review() {
     	$('div').append('<h2>You got '+numCorrect+' answers right!</h2>')
     	for(var j in questions){
-	       	$('div').append('<p class="question"> ' + questions[j].questNum + '. ' + questions[j].question + '</p><span class="review">The correct answer is <b>' +questions[j].choices[questions[j].correct]+ '</b></span>');
+	       	$('div').append('<p class="questions"> ' + questions[j].questNum + '. ' + questions[j].question + '</p><span class="review">The correct answer is <b>' +questions[j].choices[questions[j].correct]+ '</b></span>');
 	    } 
 	    $('#retry').show();
     }
