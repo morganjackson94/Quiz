@@ -10,7 +10,6 @@ body {
 	margin: 0 auto;
 	z-index: 1000;
     text-align: center;
-    padding: 40px 0px;
     position: relative;
 }
 
@@ -22,10 +21,10 @@ div {
     width: 600px;
     border-radius: 10px;
     background-color: #000;
-    opacity: .8;
-    margin: 0 auto;
+    opacity: .7;
+    margin: 80px auto;
     color: #fff;
-    padding: 30px;
+    padding: 70px;
 }
 
 .button {
@@ -33,7 +32,7 @@ div {
     font-size: 1rem;
     color: #fff;
     background-color: #000;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #565656;
     transition: background-color 300ms ease-out;
 }
 
